@@ -1,6 +1,30 @@
 @Person_HostAddress = http://localhost:5210
 
-GET {{Person_HostAddress}}/weatherforecast/
+### List all persons
+GET {{Person_HostAddress}}/person
 Accept: application/json
+
+### Get person by ID
+GET {{Person_HostAddress}}/person/3fa85f64-5717-4562-b3fc-2c963f66afa6
+Accept: application/json
+
+### Create a new person
+POST {{Person_HostAddress}}/person
+Content-Type: application/json
+
+{
+    "name": "João Silva"
+}
+
+### Update a person
+PUT {{Person_HostAddress}}/person/3fa85f64-5717-4562-b3fc-2c963f66afa6
+Content-Type: application/json
+
+{
+    "name": "João Santos"
+}
+
+### Delete a person
+DELETE {{Person_HostAddress}}/person/3fa85f64-5717-4562-b3fc-2c963f66afa6
 
 ###
